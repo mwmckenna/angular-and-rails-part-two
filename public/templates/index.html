@@ -10,6 +10,10 @@
   <ul>
     <li ng-repeat="player in players">
       {{player.name}}
+
+      <!-- This is the new star rating directive -->
+      <span star-rating rating-value="player.rating" max="10" on-rating-selected="saveRating(newRating,player)"></span>
+
        <span ng-show="player.winner" ng-class="{highlight: player == lastWinner}" class="winner">WINNER</span>
     </li>
   </ul>

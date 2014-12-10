@@ -7,6 +7,11 @@ app.controller('RaffleController', [
 			$scope.players = result;
 		})
 		
+		$scope.saveRating = function(rating, player){
+	    player.rating = rating;
+	    player.update();
+	  }
+
 		$scope.addPlayer = function() {
 			var newPlayer = new Player({
 				name: $scope.newName

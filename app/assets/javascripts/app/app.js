@@ -3,12 +3,15 @@
 // Create name spaces for all modules
 angular.module('raffler.controllers',[]);
 angular.module('raffler.factories',[]);
+angular.module('raffler.directives',[]);
+
 
 // And inject in app module
 var app = angular.module("raffler", [
 	"rails",
 	'raffler.controllers',
 	'raffler.factories',
+  'raffler.directives',
 	'ngRoute'
 ]);
 
