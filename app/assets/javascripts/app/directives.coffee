@@ -10,7 +10,7 @@ angular.module 'raffler.directives'
       # link function: it's like a directive controller
 
       # anytime stars change, redraw the whole thing
-      updateStars = () ->
+      redrawStars = () ->
         $scope.stars = []
         i = 0
         while i < $scope.max
@@ -22,7 +22,7 @@ angular.module 'raffler.directives'
       #watch for changes to the ratingValue
       $scope.$watch 'ratingValue', (newVal, oldVal) ->
         # take action -> redraw stars
-        if newVal then updateStars()
+        if newVal then redrawStars()
 
       #on-click event handler, see directive html
       $scope.toggle = (index) ->
